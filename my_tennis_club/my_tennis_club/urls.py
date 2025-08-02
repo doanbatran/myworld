@@ -18,6 +18,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('members.urls')),  # <- rất quan trọng!
+    path('', include('members.urls')),  # <--- thêm dòng này
     path('admin/', admin.site.urls),
 ]
