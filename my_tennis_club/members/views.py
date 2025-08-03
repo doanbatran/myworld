@@ -26,7 +26,7 @@ def main(reques):
 # Tạo chế độ xem thử nghiệm cho testing
 def testing(request):
   template = loader.get_template('template.html')
-  context = {
-    'fruits': ['Apple', 'Banana', 'Cherry', 'Oranges', 'Kiwi'],
-  }
-  return HttpResponse(template.render(context, request))
+  #context = {
+  #  'var1': 'John',
+  #}
+  return HttpResponse(template.render())
