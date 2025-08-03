@@ -25,7 +25,7 @@ def main(reques):
 
 # Tạo chế độ xem thử nghiệm cho testing
 def testing(request):
-  mydata = Member.objects.all()
+  mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname='Eden').values()
   template = loader.get_template('template.html')
   context = {
     'mymembers' : mydata,
