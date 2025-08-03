@@ -25,5 +25,9 @@ def main(reques):
 
 # Tạo chế độ xem thử nghiệm cho testing
 def testing(request):
+  mydata = Member.objects.all()
   template = loader.get_template('template.html')
-  return HttpResponse(template.render())
+  context = {
+    'mymembers' : mydata,
+  }
+  return HttpResponse(template.render(context, request))
