@@ -48,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Thêm điều hướng cho Whitenoise để hoạt động.
+    'whitenoise.middleware.WhiteNoise.Middleware',
 ]
 
 ROOT_URLCONF = 'my_tennis_club.urls'
