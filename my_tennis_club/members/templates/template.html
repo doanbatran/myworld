@@ -2,12 +2,15 @@
 <html>
 <body>
 
-
-{% if x is not y %}
-  <h1>Yes!</h1>
-{% else %}
-  <h1>Say No!</h1>
-{% endif %}
+<ul>
+  {% for x in fruits %}
+    <li
+      {% if forloop.first %}
+        style='background-color:rgb(176, 235, 255);'
+      {% endif %}
+    >{{ x }}</li>
+  {% endfor %}
+</ul>
 
 
 <p>In views.py you can see what the fruits variable looks like.</p>
