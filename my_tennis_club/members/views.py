@@ -25,9 +25,8 @@ def main(reques):
 
 # Tạo chế độ xem thử nghiệm cho testing
 def testing(request):
-  mydata = Member.objects.all().order_by('lastname', '-id').values()
   template = loader.get_template('template.html')
   context = {
-    'mymembers' : mydata,
+    'fruits' : ["Apple", "Cherry", "Banana"],
   }
   return HttpResponse(template.render(context, request))
