@@ -26,7 +26,4 @@ def main(reques):
 # Tạo chế độ xem thử nghiệm cho testing
 def testing(request):
   template = loader.get_template('template.html')
-  #context = {
-  #  'var1': 'John',
-  #}
   return HttpResponse(template.render())
